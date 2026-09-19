@@ -1,4 +1,4 @@
-import { K as e, W as t, c as n, et as r, h as i, k as a, lt as o } from "./AnimationUtilities-CJw-tdb_.js";
+import { K as e, W as t, c as n, et as r, h as i, k as a, lt as o } from "./AnimationUtilities-HCzBkGkl.js";
 //#region node_modules/highcharts/es-modules/Extensions/BorderRadius.js
 var { defaultOptions: s } = n, { noop: c } = o, l = {
 	radius: 0,
@@ -36,7 +36,7 @@ function p(e, t, n, i, a = {}) {
 	let o = u(e, t, n, i, a), { brStart: s = !0, brEnd: c = !0, innerR: l = 0, r: d = n, start: p = 0, end: m = 0 } = a;
 	if (a.open || !a.borderRadius) return o;
 	let h = m - p, _ = Math.sin(h / 2), v = Math.max(Math.min(r(g(a.borderRadius).radius, d - l), (d - l) / 2, d * _ / (1 + _)), 0), y = Math.min(v, h / Math.PI * 2 * l), b = o.length - 1;
-	for (; b--;) !s && (b === 0 || b === 3) || !c && (b === 1 || b === 2) || f(o, b, b > 1 ? y : v);
+	for (; b--;) (s || b !== 0 && b !== 3) && (c || b !== 1 && b !== 2) && f(o, b, b > 1 ? y : v);
 	return o;
 }
 function m() {

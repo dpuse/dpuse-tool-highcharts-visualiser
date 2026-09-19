@@ -1,5 +1,5 @@
-import { K as e, h as t, k as n } from "./AnimationUtilities-CJw-tdb_.js";
-import { t as r } from "./SeriesRegistry-CXsAINSj.js";
+import { K as e, h as t, k as n } from "./AnimationUtilities-HCzBkGkl.js";
+import { t as r } from "./SeriesRegistry-BO6tW97M.js";
 //#region node_modules/highcharts/es-modules/Series/Streamgraph/StreamgraphSeriesDefaults.js
 var i = {
 	fillOpacity: 1,
