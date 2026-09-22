@@ -1,7 +1,7 @@
 //#region node_modules/highcharts/es-modules/Core/Globals.js
 var e;
 (function(e) {
-	e.SVG_NS = "http://www.w3.org/2000/svg", e.product = "Highcharts", e.version = "13.1.0", e.win = typeof window < "u" ? window : {}, e.doc = e.win.document, e.svg = !!e.doc?.createElementNS?.(e.SVG_NS, "svg")?.createSVGRect, e.pageLang = e.doc?.documentElement?.closest("[lang]")?.lang, e.userAgent = e.win.navigator?.userAgent || "", e.isChrome = e.win.chrome, e.isFirefox = e.userAgent.indexOf("Firefox") !== -1, e.isMS = /(edge|msie|trident)/i.test(e.userAgent) && !e.win.opera, e.isSafari = !e.isChrome && e.userAgent.indexOf("Safari") !== -1, e.isTouchDevice = /(Mobile|Android|Windows Phone)/.test(e.userAgent), e.isWebKit = e.userAgent.indexOf("AppleWebKit") !== -1, e.deg2rad = Math.PI * 2 / 360, e.marginNames = [
+	e.SVG_NS = "http://www.w3.org/2000/svg", e.product = "Highcharts", e.version = "13.1.1", e.win = typeof window < "u" ? window : {}, e.doc = e.win.document, e.svg = !!e.doc?.createElementNS?.(e.SVG_NS, "svg")?.createSVGRect, e.pageLang = e.doc?.documentElement?.closest("[lang]")?.lang, e.userAgent = e.win.navigator?.userAgent || "", e.isChrome = e.win.chrome, e.isFirefox = e.userAgent.indexOf("Firefox") !== -1, e.isMS = /(edge|msie|trident)/i.test(e.userAgent) && !e.win.opera, e.isSafari = !e.isChrome && e.userAgent.indexOf("Safari") !== -1, e.isTouchDevice = /(Mobile|Android|Windows Phone)/.test(e.userAgent), e.isWebKit = e.userAgent.indexOf("AppleWebKit") !== -1, e.deg2rad = Math.PI * 2 / 360, e.marginNames = [
 		"plotTop",
 		"marginRight",
 		"marginBottom",

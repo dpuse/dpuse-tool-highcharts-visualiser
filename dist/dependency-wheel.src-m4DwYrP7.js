@@ -1,8 +1,8 @@
-import { K as e, X as t, et as n, k as r, lt as i, st as a, t as o } from "./AnimationUtilities-HCzBkGkl.js";
-import { t as s } from "./SeriesRegistry-BO6tW97M.js";
-import { t as c } from "./SVGElement-DQ_bI6Wv.js";
-import { t as l } from "./BorderRadius-DsUUgNnR.js";
-import { n as u, t as d } from "./TextPath-D9gJwxEx.js";
+import { K as e, X as t, et as n, k as r, lt as i, st as a, t as o } from "./AnimationUtilities-eb22eIjK.js";
+import { t as s } from "./SeriesRegistry-CDI1sm9L.js";
+import { t as c } from "./SVGElement-z7ENyQ6Y.js";
+import { t as l } from "./BorderRadius-Cois3N8q.js";
+import { n as u, t as d } from "./TextPath-CiV8mQgF.js";
 //#region node_modules/highcharts/es-modules/Series/DependencyWheel/DependencyWheelPoint.js
 var { sankey: { prototype: { pointClass: f } } } = s.seriesTypes, p = class extends f {
 	getSumTo() {

@@ -1,4 +1,4 @@
-import { A as e, C as t, G as n, H as r, I as i, J as a, K as o, M as s, O as c, S as l, U as u, W as d, b as f, c as p, h as m, k as h, lt as g, ot as _, p as v, rt as y, t as b, tt as x, u as S, v as C, z as w } from "./AnimationUtilities-HCzBkGkl.js";
+import { A as e, C as t, G as n, H as r, I as i, J as a, K as o, M as s, O as c, S as l, U as u, W as d, b as f, c as p, h as m, k as h, lt as g, ot as _, p as v, rt as y, t as b, tt as x, u as S, v as C, z as w } from "./AnimationUtilities-eb22eIjK.js";
 //#region node_modules/highcharts/es-modules/Core/Renderer/HTML/AST.js
 var { SVG_NS: T, win: E } = g, { trustedTypes: D } = E, O = D && r(D.createPolicy) && D.createPolicy("highcharts", { createHTML: (e) => e }), k = O ? O.createHTML("") : "", A = class e {
 	static filterUserAttributes(t) {
@@ -9,7 +9,8 @@ var { SVG_NS: T, win: E } = g, { trustedTypes: D } = E, O = D && r(D.createPolic
 				"dynsrc",
 				"href",
 				"lowsrc",
-				"src"
+				"src",
+				"xlink:href"
 			].indexOf(i) !== -1 && (a = n(r) && e.allowedReferences.some((e) => r.indexOf(e) === 0)), a || (S(33, !1, void 0, { "Invalid attribute in config": `${i}` }), delete t[i]), n(r) && t[i] && (t[i] = r.replace(/</g, "&lt;"));
 		}), t;
 	}
