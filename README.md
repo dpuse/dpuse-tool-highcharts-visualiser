@@ -13,14 +13,22 @@ There’s no need to install this tool manually. Once released, it’s uploaded 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![DPUse version](https://img.shields.io/github/v/release/dpuse/dpuse-tool-highcharts-visualiser?color=f6821f&label=DPUse)](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/releases/latest)
 [![CI](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml/badge.svg)](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/codeql.yml/badge.svg)](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/codeql.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=dpuse_dpuse-tool-highcharts-visualiser&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=dpuse_dpuse-tool-highcharts-visualiser)
 
-[Documentation](https://www.dpuse.app) · [Report a Vulnerability](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/advisories/new) · [Open an Issue](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/issues)
+[DPUse](https://www.dpuse.app) · [Report a Vulnerability](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/advisories/new) · [Open an Issue](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/issues)
+
+A TypeScript wrapper for Highcharts that implements the Data Positioning chart-rendering interface. It optimizes browser memory usage by maintaining a single Highcharts instance shared across all presenters, loading optional modules only as needed.
 
 ## About DPUse
 
-DPUse (Data Positioning & Use) is an in-browser application that positions your data for use through three core activities: sourcing, contextualising, and publishing. **Sourcing** uses a library of [Connectors](https://www.dpuse.app) to establish [Connections](https://www.dpuse.app) to applications, databases, file stores, and curated datasets; these connections are subsequently used to configure structured [Data Views](https://www.dpuse.app) from the underlying sources. **Contextualising** extracts chronological events from those [Data Views](https://www.dpuse.app) and maps them into comprehensive [Context Models](https://www.dpuse.app). This provides the DPUse Engine with the structural framework required to generate deterministic transactions, facts, or observations. **Publishing** employs a library of [Presenters](https://www.dpuse.app) to render standard [Presentations](https://www.dpuse.app) immediately using the contextualised data; additionally, [Cookbooks](https://www.dpuse.app) of [Recipes](https://www.dpuse.app) allow you to build Data Apps using your preferred tools.
+DPUse (Data Positioning & Use) is an in-browser application that positions your data for use through three core activities: sourcing, contextualising, and publishing.
+
+**Sourcing** uses a library of [Connectors](https://www.dpuse.app/connectors) to establish [Connections](https://www.dpuse.app) to applications, databases, file stores, and curated datasets; these connections are subsequently used to configure structured [Data Views](https://www.dpuse.app) from the underlying sources.
+
+**Contextualising** extracts chronological events from those [Data Views](https://www.dpuse.app) and maps them into comprehensive [Context Models](https://www.dpuse.app). This gives the DPUse Engine the structural framework needed to generate deterministic transactions, facts, or observations.
+
+**Publishing** uses a library of [Presenters](https://www.dpuse.app) to render standard [Presentations](https://www.dpuse.app) immediately using the contextualised data; additionally, [Cookbooks](https://www.dpuse.app) of [Recipes](https://www.dpuse.app) let you build Data Apps using your preferred tools.
+
+In addition, DPUse provides [Tools](https://www.dpuse.app) used by the application, and you can use them to construct connectors and presenters.
 
 ## Introduction
 
@@ -52,9 +60,15 @@ const rangeChart: HighchartsView = await highchartsTool.renderRangeChart(/* argu
 
 <!-- USAGE_START -->
 
-This connector is automatically uploaded to the DPUse Engine cloud once released and becomes instantly available to all new browser app instances, with existing instances notified of the update.
+## Usage
 
-You may view or clone this repository for your own purposes, such as building a new, similar connector, though there is currently no process to accept third-party connectors into DPUse at this stage. Cloned or forked code is unsupported and isn't guaranteed to remain compatible with the DPUse Engine as it evolves.
+This [package](https://www.npmjs.com/package/@dpuse/dpuse-tool-highcharts-visualiser) is available on [npm](https://www.npmjs.com/). Install it with:
+
+```bash
+npm install @dpuse/dpuse-tool-highcharts-visualiser
+```
+
+To work on the source instead, clone this repository.
 
 ```bash
 git clone https://github.com/dpuse/dpuse-tool-highcharts-visualiser.git
@@ -62,13 +76,15 @@ cd dpuse-tool-highcharts-visualiser
 npm install
 ```
 
-_Requires [Node.js](https://nodejs.org/) 23.11 or later, [npm](https://www.npmjs.com/) 11 or later, and [TypeScript](https://www.typescriptlang.org/) 6.0.3 or later._
+_Requires [Node.js](https://nodejs.org/) 24 or later, [npm](https://www.npmjs.com/) 12 or later, and [TypeScript](https://www.typescriptlang.org/) 6.0.3 or later._
+
+This repository is managed using the common set of actions provided by [@dpuse/dpuse-development](https://github.com/dpuse/dpuse-development). See the `scripts` block in [package.json](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/blob/main/package.json) for details.
 
 <!-- USAGE_END -->
 
-## Dependency Licenses
-
 <!-- DEPENDENCY_LICENSES_START -->
+
+## Dependency Licenses
 
 License data is collected automatically on each release using [license-checker](https://github.com/RSeidelsohn/license-checker-rseidelsohn). The following table lists all production dependencies. These dependencies (including transitive ones) have been checked and confirmed to use https://www.highcharts.com/license or MIT — all permissive, commercially-friendly licenses. Users of the uploaded library are covered by these checks; developers cloning this repository should independently verify development dependencies.
 
@@ -77,11 +93,7 @@ License data is collected automatically on each release using [license-checker](
 |[@dpuse/dpuse-shared](https://github.com/dpuse/dpuse-shared)|0.3.760|MIT|[LICENSE](licenses/downloads/@dpuse/dpuse-shared@0.3.760-LICENSE.txt)|
 |[highcharts](https://github.com/highcharts/highcharts-dist)|13.0.0|Custom: https://www.highcharts.com/license|[LICENSE](licenses/downloads/highcharts@13.0.0-LICENSE.txt)|
 
-<!-- DEPENDENCY_LICENSES_END -->
-
 ### Dependency Tree
-
-<!-- DEPENDENCY_TREE_START -->
 
 The dependency tree below lists every package in this project — direct and transitive — along with its installed version, release date, and update status. Packages flagged ❗ have a newer version available; ⚠️ indicates a package that hasn't been updated in the last 6 months or longer. Neither flag necessarily indicates a problem: we let new releases stabilise before upgrading, and some packages are simply mature and stable, requiring no active development.
 
@@ -90,9 +102,7 @@ The dependency tree below lists every package in this project — direct and tra
   - **jspdf** 
   - **svg2pdf.js**
 
-<!-- DEPENDENCY_TREE_END -->
-
-### Bundle Analysis Report
+<!-- DEPENDENCY_LICENSES_END -->
 
 <!-- BUNDLE_START -->
 

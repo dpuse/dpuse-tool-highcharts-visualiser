@@ -1,6 +1,6 @@
 // ── External Dependencies & Registrations
-import { describe, expect, it } from 'vitest';
 import Highcharts from 'highcharts/es-modules/masters/highcharts.src.js';
+import { describe, expect, it } from 'vitest';
 
 // ── Helpers ──────────────────────────────────────────────────────────────────────────────────────────────────────────
 // `seriesTypes` and `RadialAxis` are real runtime properties Highcharts modules attach to the shared instance, but

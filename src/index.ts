@@ -13,13 +13,7 @@ import type { Chart, Options, SeriesOptionsType } from 'highcharts/highcharts.sr
 export type { Options as HighchartsOptions } from 'highcharts/highcharts.src';
 
 // ── DPUse Framework
-import type {
-    PresentationCartesianTypeId,
-    PresentationPolarTypeId,
-    PresentationRangeTypeId,
-    PresentationView,
-    PresentationVisualContentConfig
-} from '@dpuse/dpuse-shared/component/presentation';
+import type { PresentationCartesianTypeId, PresentationPolarTypeId, PresentationRangeTypeId, PresentationView, PresentationVisualContentConfig } from '@dpuse/dpuse-shared';
 
 // ── Types ────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
