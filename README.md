@@ -12,6 +12,7 @@ There’s no need to install this tool manually. Once released, it’s uploaded 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![DPUse version](https://img.shields.io/github/v/release/dpuse/dpuse-tool-highcharts-visualiser?color=f6821f&label=DPUse)](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/releases/latest)
+[![npm version](https://img.shields.io/npm/v/@dpuse/dpuse-tool-highcharts-visualiser?color=cb3837&label=npm)](https://www.npmjs.com/package/@dpuse/dpuse-tool-highcharts-visualiser)
 [![CI](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml/badge.svg)](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml)
 
 [DPUse](https://www.dpuse.app) · [Report a Vulnerability](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/advisories/new) · [Open an Issue](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/issues)
@@ -86,243 +87,292 @@ This repository is managed using the common set of actions provided by [@dpuse/d
 
 ## Dependency Licenses
 
-License data is collected automatically on each release using [license-checker](https://github.com/RSeidelsohn/license-checker-rseidelsohn). The following table lists all production dependencies. These dependencies (including transitive ones) have been checked and confirmed to use https://www.highcharts.com/license or MIT — all permissive, commercially-friendly licenses. Users of the uploaded library are covered by these checks; developers cloning this repository should independently verify development dependencies.
+License data is updated each time `npm run document` is run, using [license-checker](https://github.com/RSeidelsohn/license-checker-rseidelsohn). The following table lists all production dependencies. These dependencies (including transitive ones) have been checked and confirmed to use https://www.highcharts.com/license, BSD-3-Clause, or MIT — all permissive, commercially-friendly licenses. Users of the uploaded library are covered by these checks; developers cloning this repository should independently verify development dependencies.
 
-|Dependency|Version|License(s)|Document|
-|:-|:-:|:-|:-|
-|[@dpuse/dpuse-shared](https://github.com/dpuse/dpuse-shared)|0.3.760|MIT|[LICENSE](licenses/downloads/@dpuse/dpuse-shared@0.3.760-LICENSE.txt)|
-|[highcharts](https://github.com/highcharts/highcharts-dist)|13.0.0|Custom: https://www.highcharts.com/license|[LICENSE](licenses/downloads/highcharts@13.0.0-LICENSE.txt)|
+| Dependency                                                             | Version | License(s)                                 | Document                                                              |
+| :--------------------------------------------------------------------- | :-----: | :----------------------------------------- | :-------------------------------------------------------------------- |
+| [@borewit/text-codec](https://github.com/Borewit/text-codec)           |  0.2.2  | MIT                                        | [LICENSE](licenses/downloads/@borewit/text-codec@0.2.2-LICENSE.txt)   |
+| [@dpuse/dpuse-shared](https://github.com/dpuse/dpuse-shared)           | 0.3.865 | MIT                                        | [LICENSE](licenses/downloads/@dpuse/dpuse-shared@0.3.865-LICENSE.txt) |
+| [@tokenizer/inflate](https://github.com/Borewit/tokenizer-inflate)     |  0.4.1  | MIT                                        | [LICENSE](licenses/downloads/@tokenizer/inflate@0.4.1-LICENSE.txt)    |
+| [@tokenizer/token](https://github.com/Borewit/tokenizer-token)         |  0.3.0  | MIT                                        | [LICENSE](licenses/downloads/@tokenizer/token@0.3.0-LICENSE.txt)      |
+| [debug](https://github.com/debug-js/debug)                             |  4.4.3  | MIT                                        | [LICENSE](licenses/downloads/debug@4.4.3-LICENSE.txt)                 |
+| [file-type](https://github.com/sindresorhus/file-type)                 | 22.1.1  | MIT                                        | [LICENSE](licenses/downloads/file-type@22.1.1-LICENSE.txt)            |
+| [highcharts](https://github.com/highcharts/highcharts-dist)            | 13.1.1  | Custom: https://www.highcharts.com/license | [LICENSE](licenses/downloads/highcharts@13.1.1-LICENSE.txt)           |
+| [ieee754](https://github.com/feross/ieee754)                           |  1.2.1  | BSD-3-Clause                               | [LICENSE](licenses/downloads/ieee754@1.2.1-LICENSE.txt)               |
+| [ms](https://github.com/vercel/ms)                                     |  2.1.3  | MIT                                        | [LICENSE](licenses/downloads/ms@2.1.3-LICENSE.txt)                    |
+| [strtok3](https://github.com/Borewit/strtok3)                          | 10.3.5  | MIT                                        | [LICENSE](licenses/downloads/strtok3@10.3.5-LICENSE.txt)              |
+| [token-types](https://github.com/Borewit/token-types)                  |  6.1.2  | MIT                                        | [LICENSE](licenses/downloads/token-types@6.1.2-LICENSE.txt)           |
+| [uint8array-extras](https://github.com/sindresorhus/uint8array-extras) |  1.6.0  | MIT                                        | [LICENSE](licenses/downloads/uint8array-extras@1.6.0-LICENSE.txt)     |
+| [valibot](https://github.com/open-circle/valibot)                      |  1.5.0  | MIT                                        | [LICENSE](licenses/downloads/valibot@1.5.0-LICENSE.txt)               |
 
 ### Dependency Tree
 
-The dependency tree below lists every package in this project — direct and transitive — along with its installed version, release date, and update status. Packages flagged ❗ have a newer version available; ⚠️ indicates a package that hasn't been updated in the last 6 months or longer. Neither flag necessarily indicates a problem: we let new releases stabilise before upgrading, and some packages are simply mature and stable, requiring no active development.
+The dependency tree below lists every package in this project — direct and transitive — along with its installed version, release date, and update status. Packages flagged ❗ have a newer version available; ⚠️ indicates a package that hasn't been updated in the last 6 months or longer. Neither flag necessarily indicates a problem: we let new releases stabilise before upgrading, and some packages are mature and stable (have limited or no dependencies), so they require no active development.
 
-- **[@dpuse/dpuse-shared](https://github.com/dpuse/dpuse-shared)** 0.3.760 — this month: 2026-08-02
-- **[highcharts](https://github.com/highcharts/highcharts-dist)** 13.0.0 — **1 month** ago: 2026-06-11
-  - **jspdf** 
-  - **svg2pdf.js**
+- **[@dpuse/dpuse-shared](https://github.com/dpuse/dpuse-shared)** 0.3.865 — this month: 2026-09-29
+    - **[file-type](https://github.com/sindresorhus/file-type)** 22.1.1 — this month: 2026-09-17
+        - **[@tokenizer/inflate](https://github.com/Borewit/tokenizer-inflate)** 0.4.1 — **10 months** ago: 2025-11-18 ⚠️
+            - **[debug](https://github.com/debug-js/debug)** 4.4.3 — **12 months** ago: 2025-09-13 ⚠️
+                - **[ms](https://github.com/vercel/ms)** 2.1.3 — **69 months** ago: 2020-12-08 ⚠️
+            - **[token-types](https://github.com/Borewit/token-types)** 6.1.2 — **8 months** ago: 2026-01-01 ⚠️
+        - **[strtok3](https://github.com/Borewit/strtok3)** 10.3.5 — **6 months** ago: 2026-03-21
+            - **[@tokenizer/token](https://github.com/Borewit/tokenizer-token)** 0.3.0 — **62 months** ago: 2021-07-12 ⚠️
+        - **[token-types](https://github.com/Borewit/token-types)** 6.1.2 — **8 months** ago: 2026-01-01 ⚠️
+            - **[@borewit/text-codec](https://github.com/Borewit/text-codec)** 0.2.2 — **6 months** ago: 2026-03-11
+            - **[@tokenizer/token](https://github.com/Borewit/tokenizer-token)** 0.3.0 — **62 months** ago: 2021-07-12 ⚠️
+            - **[ieee754](https://github.com/feross/ieee754)** 1.2.1 — **71 months** ago: 2020-10-27 ⚠️
+        - **[uint8array-extras](https://github.com/sindresorhus/uint8array-extras)** 1.6.0 — this month: 2026-09-26
+    - **[valibot](https://github.com/open-circle/valibot)** 1.5.0 — this month: 2026-09-09
+- **[highcharts](https://github.com/highcharts/highcharts-dist)** 13.1.1 — this month: 2026-09-20
+    - **jspdf**
+    - **svg2pdf.js**
 
 <!-- DEPENDENCY_LICENSES_END -->
 
 <!-- BUNDLE_START -->
 
-The Bundle Analysis Report is generated automatically on each release using [Sonda](https://sonda.dev/), which analyses final source maps to reveal the actual effects of tree-shaking and minification rather than relying on pre-build estimates.
+## Bundle Analysis
+
+This report is updated with each release, from the bundle the release builds, using [Sonda](https://sonda.dev/), which analyses final source maps to reveal the actual effects of tree-shaking and minification rather than relying on pre-build estimates.
 
 _Note: Sonda's Vite reports currently exclude CSS files, since Vite does not generate source maps for CSS._
 
-|Chunk/Module/File|Composition|
-|:------ |:-----------|
-| dist/dpuse-tool-highcharts-visualiser.es.js | 403.1 kB · brotli 96.5 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `████████████░░░░░░░░` 59.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Axis.js | `█░░░░░░░░░░░░░░░░░░░` 5.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Chart/Chart.js | `█░░░░░░░░░░░░░░░░░░░` 4.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Themes/Adaptive.js | `█░░░░░░░░░░░░░░░░░░░` 3.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/Navigator.js | `█░░░░░░░░░░░░░░░░░░░` 3.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Legend/Legend.js | `░░░░░░░░░░░░░░░░░░░░` 2.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Pointer.js | `░░░░░░░░░░░░░░░░░░░░` 2.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Tooltip.js | `░░░░░░░░░░░░░░░░░░░░` 2.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/SVGRenderer.js | `░░░░░░░░░░░░░░░░░░░░` 1.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Options/LangDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 1.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/InfoRegionsComponent.js | `░░░░░░░░░░░░░░░░░░░░` 1.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/SeriesKeyboardNavigation.js | `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Scrollbar/Scrollbar.js | `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/DataLabel.js | `░░░░░░░░░░░░░░░░░░░░` 1.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/SeriesDescriber.js | `░░░░░░░░░░░░░░░░░░░░` 1.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Tick.js | `░░░░░░░░░░░░░░░░░░░░` 1.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/LegendComponent.js | `░░░░░░░░░░░░░░░░░░░░` 1.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PieDataLabel.js | `░░░░░░░░░░░░░░░░░░░░` 1.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/RangeSelectorComponent.js | `░░░░░░░░░░░░░░░░░░░░` 1.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/SVGLabel.js | `░░░░░░░░░░░░░░░░░░░░` 0.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/KeyboardNavigation.js | `░░░░░░░░░░░░░░░░░░░░` 0.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/TextBuilder.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/ScrollablePlotArea.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/MenuComponent.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Accessibility.js | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Stacking/StackingAxis.js | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/ZoomComponent.js | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/ProxyProvider.js | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PieSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/ChartUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Area/AreaSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/NavigatorComponent.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Options/DeprecatedOptions.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/NewDataAnnouncer.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/HTMLUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/FocusBorder.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/PlotLineOrBand/PlotLineOrBand.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/HTML/HTMLElement.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/Symbols.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/ProxyElement.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/OverlappingDataLabels.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/ScrollbarAxis.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/ForcedMarkers.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/HighContrastTheme.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/ChartNavigatorComposition.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/AxisDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PiePoint.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/highcharts.src.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Line/LineSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Color/Palette.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/PlotLineOrBand/PlotLineOrBandAxis.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/A11yI18n.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/ContainerComponent.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/NavigatorDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/RendererUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/AnnotationsA11y.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/LogarithmicAxis.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Options/A11yDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/DateTimeAxis.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Responsive.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/SeriesComponent.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/HighContrastMode.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Column/ColumnDataLabel.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/Announcer.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/NavigatorAxisComposition.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Spline/SplineSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Scatter/ScatterSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/AccessibilityComponent.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Scrollbar/ScrollbarDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Geometry/GeometryUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PieSeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/KeyboardNavigationHandler.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/EventProvider.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/NavigatorComposition.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/DOMElementProvider.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/NavigatorSymbols.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Scatter/ScatterSeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaSpline/AreaSplineSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/accessibility.src.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Utilities/StockUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Bar/BarSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Area/AreaSeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/themes/adaptive.src.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `█░░░░░░░░░░░░░░░░░░░` 4.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;src → index.ts | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| dist/BorderRadius-2zMZW_aK.js | 62.1 kB · brotli 19.0 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `██░░░░░░░░░░░░░░░░░░` 9.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/Series.js | `█░░░░░░░░░░░░░░░░░░░` 5.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Column/ColumnSeries.js | `░░░░░░░░░░░░░░░░░░░░` 1.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/BorderRadius.js | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Stacking/StackItem.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Data/DataTableCore.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/SeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Legend/LegendSymbol.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/CenteredUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Data/ColumnUtils.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Column/ColumnSeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Foundation.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| dist/highchartsMoreCustom-CcpfmVny.js | 52.5 kB · brotli 15.2 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `██░░░░░░░░░░░░░░░░░░` 7.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/PolarComposition.js | `░░░░░░░░░░░░░░░░░░░░` 2.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/RadialAxis.js | `░░░░░░░░░░░░░░░░░░░░` 1.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Waterfall/WaterfallSeries.js | `░░░░░░░░░░░░░░░░░░░░` 1.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaRange/AreaRangeSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Pane/Pane.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/ColumnRange/ColumnRangeSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Pane/PaneComposition.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaRange/AreaRangePoint.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/WaterfallAxis.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/RadialAxisDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Pane/PaneDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Waterfall/WaterfallPoint.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/ColumnRange/ColumnRangePoint.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaSplineRange/AreaSplineRangeSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Waterfall/WaterfallSeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;src → highchartsMoreCustom.ts | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| dist/AnimationUtilities-Bby2idBR.js | 33.7 kB · brotli 10.6 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `█░░░░░░░░░░░░░░░░░░░` 4.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Shared/Utilities.js | `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Shared/TimeBase.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Defaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Animation/Fx.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Color/Color.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Time.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Utilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Animation/AnimationUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Globals.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Chart/ChartDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Color/PaletteDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| dist/SeriesRegistry-0cj0ZJqn.js | 19.7 kB · brotli 7.0 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `█░░░░░░░░░░░░░░░░░░░` 3.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/Point.js | `░░░░░░░░░░░░░░░░░░░░` 1.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/HTML/AST.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Templating.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/SeriesRegistry.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| dist/SVGElement-BmvC_qu3.js | 16.2 kB · brotli 5.4 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts → es-modules/Core/Renderer/SVG/SVGElement.js | `░░░░░░░░░░░░░░░░░░░░` 2.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| dist/sankey.src-DocCurOx.js | 16.0 kB · brotli 5.1 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `░░░░░░░░░░░░░░░░░░░░` 2.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeySeries.js | `░░░░░░░░░░░░░░░░░░░░` 1.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/NodesComposition.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/TreeUtilities.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeySeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeyPoint.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/sankey.src.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| dist/pattern-fill.src-BPmr3DQg.js | 8.7 kB · brotli 2.8 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/PatternFill.js | `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/pattern-fill.src.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| dist/dependency-wheel.src-BHmwx9rW.js | 5.5 kB · brotli 2.0 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/DependencyWheel/DependencyWheelSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/DependencyWheel/DependencyWheelPoint.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/DependencyWheel/DependencyWheelSeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/dependency-wheel.src.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| dist/TextPath-DK4Jkzd7.js | 4.7 kB · brotli 1.8 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/TextPath.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeyColumnComposition.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| dist/streamgraph.src-Bn6PY8Fd.js | 788 B · brotli 434 B |
-| &nbsp;&nbsp;&nbsp;&nbsp;highcharts | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Streamgraph/StreamgraphSeries.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Streamgraph/StreamgraphSeriesDefaults.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
+| Chunk/Module/File                                                                                                               | Composition                  |
+| :------------------------------------------------------------------------------------------------------------------------------ | :--------------------------- |
+| dist/dpuse-tool-highcharts-visualiser.es.js                                                                                     | 405.0 kB · gzip 115.2 kB     |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `████████████░░░░░░░░` 59.7% |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Axis.js                                                    | `█░░░░░░░░░░░░░░░░░░░` 5.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Chart/Chart.js                                                  | `█░░░░░░░░░░░░░░░░░░░` 4.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Themes/Adaptive.js                                        | `█░░░░░░░░░░░░░░░░░░░` 3.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/Navigator.js                                         | `█░░░░░░░░░░░░░░░░░░░` 3.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Pointer.js                                                      | `░░░░░░░░░░░░░░░░░░░░` 2.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Legend/Legend.js                                                | `░░░░░░░░░░░░░░░░░░░░` 2.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Tooltip.js                                                      | `░░░░░░░░░░░░░░░░░░░░` 2.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/SVGRenderer.js                                     | `░░░░░░░░░░░░░░░░░░░░` 1.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Options/LangDefaults.js                                | `░░░░░░░░░░░░░░░░░░░░` 1.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/InfoRegionsComponent.js                     | `░░░░░░░░░░░░░░░░░░░░` 1.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/SeriesKeyboardNavigation.js | `░░░░░░░░░░░░░░░░░░░░` 1.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Scrollbar/Scrollbar.js                                         | `░░░░░░░░░░░░░░░░░░░░` 1.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/SeriesDescriber.js          | `░░░░░░░░░░░░░░░░░░░░` 1.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/DataLabel.js                                             | `░░░░░░░░░░░░░░░░░░░░` 1.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Tick.js                                                    | `░░░░░░░░░░░░░░░░░░░░` 1.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/LegendComponent.js                          | `░░░░░░░░░░░░░░░░░░░░` 1.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PieDataLabel.js                                           | `░░░░░░░░░░░░░░░░░░░░` 1.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/RangeSelectorComponent.js                   | `░░░░░░░░░░░░░░░░░░░░` 1.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/SVGLabel.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.9%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/KeyboardNavigation.js                                  | `░░░░░░░░░░░░░░░░░░░░` 0.9%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/TextBuilder.js                                     | `░░░░░░░░░░░░░░░░░░░░` 0.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Accessibility.js                                       | `░░░░░░░░░░░░░░░░░░░░` 0.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/ScrollablePlotArea.js                                     | `░░░░░░░░░░░░░░░░░░░░` 0.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/MenuComponent.js                            | `░░░░░░░░░░░░░░░░░░░░` 0.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Stacking/StackingAxis.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.7%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/ZoomComponent.js                            | `░░░░░░░░░░░░░░░░░░░░` 0.7%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/ProxyProvider.js                                       | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PieSeries.js                                              | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/ChartUtilities.js                                | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Area/AreaSeries.js                                            | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/NavigatorComponent.js                       | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/PlotLineOrBand/PlotLineOrBand.js                           | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/HTMLUtilities.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Options/DeprecatedOptions.js                           | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/NewDataAnnouncer.js         | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/FocusBorder.js                                         | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/HTML/HTMLElement.js                                    | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/SVG/Symbols.js                                         | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/ProxyElement.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/OverlappingDataLabels.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/ScrollbarAxis.js                                           | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/ForcedMarkers.js            | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/HighContrastTheme.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/ChartNavigatorComposition.js                         | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/highcharts.src.js                                            | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/AxisDefaults.js                                            | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PiePoint.js                                               | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Line/LineSeries.js                                            | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/PlotLineOrBand/PlotLineOrBandAxis.js                       | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Color/Palette.js                                                | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/A11yI18n.js                                            | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/ContainerComponent.js                       | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/NavigatorDefaults.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/RendererUtilities.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/AnnotationsA11y.js                          | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/LogarithmicAxis.js                                         | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Options/A11yDefaults.js                                | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/DateTimeAxis.js                                            | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Responsive.js                                                   | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Components/SeriesComponent/SeriesComponent.js          | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/HighContrastMode.js                                    | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Column/ColumnDataLabel.js                                     | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/Announcer.js                                     | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/NavigatorAxisComposition.js                                | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Spline/SplineSeries.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Scatter/ScatterSeries.js                                      | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/AccessibilityComponent.js                              | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Scrollbar/ScrollbarDefaults.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Geometry/GeometryUtilities.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Pie/PieSeriesDefaults.js                                      | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/KeyboardNavigationHandler.js                           | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/EventProvider.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/NavigatorComposition.js                              | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Accessibility/Utils/DOMElementProvider.js                            | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Navigator/NavigatorSymbols.js                                  | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Scatter/ScatterSeriesDefaults.js                              | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaSpline/AreaSplineSeries.js                                | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/accessibility.src.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Stock/Utilities/StockUtilities.js                                    | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Bar/BarSeries.js                                              | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Area/AreaSeriesDefaults.js                                    | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/themes/adaptive.src.js                                       | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `█░░░░░░░░░░░░░░░░░░░` 4.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;src → index.ts                                                                                          | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| dist/CenteredUtilities-WO6ukK5m.js                                                                                              | 57.9 kB · gzip 19.8 kB       |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `██░░░░░░░░░░░░░░░░░░` 8.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/Series.js                                                | `█░░░░░░░░░░░░░░░░░░░` 5.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Column/ColumnSeries.js                                        | `░░░░░░░░░░░░░░░░░░░░` 1.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/Stacking/StackItem.js                                      | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Data/DataTableCore.js                                                | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/SeriesDefaults.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Legend/LegendSymbol.js                                          | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/CenteredUtilities.js                                          | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Data/ColumnUtils.js                                                  | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Column/ColumnSeriesDefaults.js                                | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Foundation.js                                                   | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| dist/highchartsMoreCustom-C7_1r-Ql.js                                                                                           | 54.1 kB · gzip 17.5 kB       |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `██░░░░░░░░░░░░░░░░░░` 8.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/PolarComposition.js                                           | `░░░░░░░░░░░░░░░░░░░░` 2.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/RadialAxis.js                                              | `░░░░░░░░░░░░░░░░░░░░` 2.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Waterfall/WaterfallSeries.js                                  | `░░░░░░░░░░░░░░░░░░░░` 1.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaRange/AreaRangeSeries.js                                  | `░░░░░░░░░░░░░░░░░░░░` 0.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Pane/Pane.js                                              | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/ColumnRange/ColumnRangeSeries.js                              | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/RangeDataLabel.js                                             | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Pane/PaneComposition.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaRange/AreaRangePoint.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/WaterfallAxis.js                                           | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Axis/RadialAxisDefaults.js                                      | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/Pane/PaneDefaults.js                                      | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Waterfall/WaterfallPoint.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/ColumnRange/ColumnRangePoint.js                               | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/AreaSplineRange/AreaSplineRangeSeries.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Waterfall/WaterfallSeriesDefaults.js                          | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/ColumnRange/ColumnRangeSeriesDefaults.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;src → highchartsMoreCustom.ts                                                                           | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| dist/AnimationUtilities-eb22eIjK.js                                                                                             | 33.6 kB · gzip 11.9 kB       |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `█░░░░░░░░░░░░░░░░░░░` 4.9%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Shared/Utilities.js                                                  | `░░░░░░░░░░░░░░░░░░░░` 1.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Shared/TimeBase.js                                                   | `░░░░░░░░░░░░░░░░░░░░` 0.8%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Defaults.js                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.7%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Animation/Fx.js                                                 | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Color/Color.js                                                  | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Time.js                                                         | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Utilities.js                                                    | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Animation/AnimationUtilities.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Globals.js                                                      | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Chart/ChartDefaults.js                                          | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Color/PaletteDefaults.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| dist/SeriesRegistry-CDI1sm9L.js                                                                                                 | 19.9 kB · gzip 7.8 kB        |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `█░░░░░░░░░░░░░░░░░░░` 3.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/Point.js                                                 | `░░░░░░░░░░░░░░░░░░░░` 1.7%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Renderer/HTML/AST.js                                            | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Templating.js                                                   | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Core/Series/SeriesRegistry.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| dist/SVGElement-z7ENyQ6Y.js                                                                                                     | 16.1 kB · gzip 6.0 kB        |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts → es-modules/Core/Renderer/SVG/SVGElement.js                                                 | `░░░░░░░░░░░░░░░░░░░░` 2.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| dist/sankey.src-B-54oc-3.js                                                                                                     | 15.9 kB · gzip 5.6 kB        |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `░░░░░░░░░░░░░░░░░░░░` 2.2%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeySeries.js                                        | `░░░░░░░░░░░░░░░░░░░░` 1.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/NodesComposition.js                                           | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/TreeUtilities.js                                              | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeySeriesDefaults.js                                | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeyPoint.js                                         | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/sankey.src.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| dist/pattern-fill.src-kXG__4iS.js                                                                                               | 8.7 kB · gzip 3.1 kB         |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `░░░░░░░░░░░░░░░░░░░░` 1.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/PatternFill.js                                            | `░░░░░░░░░░░░░░░░░░░░` 1.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/pattern-fill.src.js                                  | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| dist/dependency-wheel.src-m4DwYrP7.js                                                                                           | 5.5 kB · gzip 2.2 kB         |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `░░░░░░░░░░░░░░░░░░░░` 0.7%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/DependencyWheel/DependencyWheelSeries.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.5%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/DependencyWheel/DependencyWheelPoint.js                       | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/DependencyWheel/DependencyWheelSeriesDefaults.js              | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/masters/modules/dependency-wheel.src.js                              | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.2%  |
+| dist/TextPath-CiV8mQgF.js                                                                                                       | 4.6 kB · gzip 2.0 kB         |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `░░░░░░░░░░░░░░░░░░░░` 0.6%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Extensions/TextPath.js                                               | `░░░░░░░░░░░░░░░░░░░░` 0.4%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Sankey/SankeyColumnComposition.js                             | `░░░░░░░░░░░░░░░░░░░░` 0.3%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| dist/BorderRadius-Cois3N8q.js                                                                                                   | 4.6 kB · gzip 1.9 kB         |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts → es-modules/Extensions/BorderRadius.js                                                      | `░░░░░░░░░░░░░░░░░░░░` 0.7%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| dist/streamgraph.src-DLpEiTz6.js                                                                                                | 735 B · gzip 465 B           |
+| &nbsp;&nbsp;&nbsp;&nbsp;highcharts                                                                                              | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Streamgraph/StreamgraphSeries.js                              | `░░░░░░░░░░░░░░░░░░░░` 0.1%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;es-modules/Series/Streamgraph/StreamgraphSeriesDefaults.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
+| &nbsp;&nbsp;&nbsp;&nbsp;(bundler output, whitespace & JSON)                                                                     | `░░░░░░░░░░░░░░░░░░░░` 0.0%  |
 
-(unassigned) = bytes Sonda can't trace to a specific source line (whitespace, stray keywords, bundler-injected region markers) — not actual missing/unknown code.
+(bundler output, whitespace & JSON) = bytes Sonda can't trace to a source file: whitespace (indentation and line breaks), code the bundler generates (region comments, the combined import/export lines, its small runtime helper and wrappers), and imported JSON such as `config.json`, which the bundler doesn't map. The JSON and the generated code are real bytes that ship; the whitespace mostly disappears once compressed.
 
 <!-- BUNDLE_END -->
 
-<!-- GOVERNANCE_START -->
+<!-- QUALITY_SECURITY_START -->
 
-## Security & Quality
+## Quality & Security
 
-### CodeQL
+This section is updated each time `npm run document` is run. Settings come from the repository's workflow files and GitHub. Test coverage and the Fallow score are measured at the same time.
 
-[CodeQL](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/code-scanning) static analysis runs on every push to `main` and on a weekly schedule, scanning TypeScript, JavaScript, Rust, and GitHub Actions workflow files for security vulnerabilities and coding errors.
+### Testing
 
-### SonarCloud
+| Check                | Status | What it does                                                                                                                                                                                              |
+| :------------------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unit tests           | ✅ On  | [Vitest](https://vitest.dev) runs the unit tests. Part of the [CI workflow](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml) on every push and pull request to `main`. |
+| Property-based tests | ❌ Off | [fast-check](https://fast-check.dev) runs many random inputs per test to find edge cases, alongside the unit tests.                                                                                       |
 
-[SonarCloud](https://sonarcloud.io/summary/new_code?id=dpuse_dpuse-tool-highcharts-visualiser) performs continuous code quality and security analysis on every push, detecting bugs, code smells, and security vulnerabilities in the TypeScript source.
+### Code Quality
 
-### Vulnerability Scanning
+| Check         | Status | What it does                                                                                                                                                                                                                        |
+| :------------ | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Code analysis | ❌ Off | [SonarCloud](https://sonarcloud.io) checks every push for bugs, code smells and vulnerabilities.                                                                                                                                    |
+| Linting       | ✅ On  | [ESLint](https://eslint.org) checks the code for errors and style problems. Part of the [CI workflow](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml) on every push and pull request to `main`. |
 
-Two complementary tools continuously monitor dependencies for known vulnerabilities:
+### Security Analysis
 
-- [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit) runs on every push to `main` via the CI workflow, failing the build if any high or critical severity vulnerabilities are detected.
-- [GitHub Dependabot](https://docs.github.com/en/code-security/dependabot) automatically raises pull requests to update vulnerable dependencies, drawing on the GitHub Advisory Database which combines NVD and npm-specific advisories.
+| Check           | Status | What it does                                                                                                                                                                                                                                                                                                                                                                                               |
+| :-------------- | :----- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Push protection | ✅ On  | [GitHub push protection](https://docs.github.com/en/code-security/secret-scanning/push-protection-for-repositories-and-organizations) blocks pushes that contain credentials.                                                                                                                                                                                                                              |
+| Static analysis | ✅ On  | [![CodeQL](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/codeql.yml/badge.svg)](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/code-scanning) [CodeQL](https://codeql.github.com) scans GitHub Actions and JavaScript/TypeScript for security vulnerabilities, using the extended security queries, on every push and pull request to `main` and weekly. |
+| Secret scanning | ✅ On  | [GitHub secret scanning](https://docs.github.com/en/code-security/secret-scanning) detects credentials, such as API keys and tokens, committed to the repository.                                                                                                                                                                                                                                          |
 
-### Supply Chain Security
+### Dependencies
 
-[Socket.dev](https://socket.dev) monitors all dependencies for supply chain risk — detecting malicious packages, dependency confusion, typosquatting, and suspicious behaviour that may not yet have a CVE.
-
-### Reporting Vulnerabilities
-
-Please do not open public GitHub issues for security vulnerabilities. Use [GitHub private vulnerability reporting](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/advisories/new) instead. See [SECURITY.md](./SECURITY.md) for the full disclosure policy, contact details, and expected response times.
+| Check               | Status | What it does                                                                                                                                                                                                                                                                                                                            |
+| :------------------ | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vulnerability audit | ✅ On  | [npm audit](https://docs.npmjs.com/cli/commands/npm-audit) fails when a shipped dependency has any known vulnerability, or a development dependency has a high or critical one. Part of the [CI workflow](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml) on every push and pull request to `main`. |
+| Supply chain risk   | ✅ On  | [Socket](https://socket.dev) flags malicious packages, typosquatting and suspicious behaviour that may not yet have a CVE.                                                                                                                                                                                                              |
+| Security alerts     | ✅ On  | [Dependabot](https://docs.github.com/en/code-security/dependabot) alerts when a dependency has a known vulnerability, using the GitHub Advisory Database.                                                                                                                                                                               |
+| Security updates    | ❌ Off | [Dependabot](https://docs.github.com/en/code-security/dependabot) opens pull requests that update vulnerable dependencies. These are handled manually.                                                                                                                                                                                  |
+| Version updates     | ❌ Off | [Dependabot](https://docs.github.com/en/code-security/dependabot) opens pull requests for new dependency versions. These are handled manually.                                                                                                                                                                                          |
 
 ### OpenSSF 🚧
 
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/dpuse/dpuse-tool-highcharts-visualiser/badge)](https://scorecard.dev/viewer/?uri=github.com/dpuse/dpuse-tool-highcharts-visualiser)
 
-This project is working towards the [OpenSSF Best Practices](https://www.bestpractices.dev) Passing badge, a self-certification covering security policy, vulnerability reporting, build processes, code quality, and more. Currently the [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/dpuse/dpuse-tool-highcharts-visualiser) provides an independent automated assessment of the project's security practices and is an ongoing area of improvement.
+This project is working towards the [OpenSSF Best Practices](https://www.bestpractices.dev) Passing badge, a self-certification covering security policy, vulnerability reporting, build processes, code quality, and more. Currently the [OpenSSF Scorecard](https://scorecard.dev) provides an independent automated assessment of the project's security practices and is an ongoing area of improvement.
+
+### Reporting Vulnerabilities
+
+Please do not open public GitHub issues for security vulnerabilities. Use [GitHub private vulnerability reporting](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/advisories/new) instead. See [SECURITY.md](./SECURITY.md) for the full disclosure policy, contact details, and expected response times.
+
+<!-- QUALITY_SECURITY_END -->
+
+<!-- CONTRIBUTING_LICENSE_START -->
 
 ## Contributing
 
@@ -334,6 +384,6 @@ For security vulnerabilities, see [Reporting Vulnerabilities](#reporting-vulnera
 
 This project is licensed under the MIT License, permitting free use, modification, and distribution.
 
-[MIT](./LICENSE) © 2026-present Jonathan Terrell
+[MIT](./LICENSE) © 2026 Jonathan Terrell
 
-<!-- GOVERNANCE_END -->
+<!-- CONTRIBUTING_LICENSE_END -->

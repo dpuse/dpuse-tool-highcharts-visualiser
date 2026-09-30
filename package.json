@@ -1,6 +1,6 @@
 {
     "name": "@dpuse/dpuse-tool-highcharts-visualiser",
-    "version": "0.0.87",
+    "version": "0.0.90",
     "private": false,
     "description": "A TypeScript wrapper for Highcharts that implements the Data Positioning chart-rendering interface. It optimizes browser memory usage by maintaining a single Highcharts instance shared across all presenters, loading optional modules only as needed.",
     "license": "MIT",
@@ -53,10 +53,10 @@
         "audit": "node -e \"import('@dpuse/dpuse-development').then(m => m.auditDependencies())\"",
         "build": "node -e \"import('@dpuse/dpuse-development').then(m => m.buildProject())\"",
         "check": "node -e \"import('@dpuse/dpuse-development').then(m => m.checkProject())\"",
-        "document": "node -e \"import('@dpuse/dpuse-development').then(m => m.documentProject('https://www.highcharts.com/license;MIT'))\"",
+        "document": "node -e \"import('@dpuse/dpuse-development').then(m => m.documentProject('https://www.highcharts.com/license;BSD-3-Clause;MIT'))\"",
         "format": "node -e \"import('@dpuse/dpuse-development').then(m => m.formatCode())\"",
         "lint": "node -e \"import('@dpuse/dpuse-development').then(m => m.lintCode())\"",
-        "release": "op run --env-file=.env -- node -e \"import('@dpuse/dpuse-development').then(m => m.releaseProject('https://www.highcharts.com/license;MIT'))\"",
+        "release": "op run --env-file=.env -- node -e \"import('@dpuse/dpuse-development').then(m => m.releaseProject('https://www.highcharts.com/license;BSD-3-Clause;MIT'))\"",
         "sync": "node -e \"import('@dpuse/dpuse-development').then(m => m.syncProjectWithGitHub())\"",
         "test": "node -e \"import('@dpuse/dpuse-development').then(m => m.testProject())\""
     },
@@ -76,6 +76,6 @@
         "vite": "^8.3.1",
         "vite-plugin-dts": "^5.1.1",
         "vitest": "^5.0.2",
-        "wrangler": "^4.143.0"
+        "wrangler": "^4.144.0"
     }
 }
