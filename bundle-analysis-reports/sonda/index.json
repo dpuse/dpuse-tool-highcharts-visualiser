@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "0.14.0",
-    "generatedAt": "2026-09-30T08:26:25.833Z",
+    "generatedAt": "2026-10-01T09:12:32.735Z",
     "integration": "vite",
     "sources": false,
     "gzip": true,
@@ -21,8 +21,8 @@
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 28269,
-      "gzip": 1179,
+      "uncompressed": 28259,
+      "gzip": 1176,
       "brotli": 0,
       "parent": "dist/dpuse-tool-highcharts-visualiser.es.js"
     },
@@ -172,8 +172,8 @@
       "kind": "asset",
       "name": "dist/dpuse-tool-highcharts-visualiser.es.js",
       "type": "script",
-      "uncompressed": 414717,
-      "gzip": 117966,
+      "uncompressed": 414707,
+      "gzip": 117964,
       "brotli": 0
     },
     {
@@ -2675,7 +2675,7 @@
       "name": "src/index.ts",
       "type": "script",
       "format": "esm",
-      "uncompressed": 5565
+      "uncompressed": 5555
     },
     {
       "kind": "chunk",

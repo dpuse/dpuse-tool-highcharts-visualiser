@@ -42,17 +42,11 @@ In addition, DPUse provides [Tools](https://www.dpuse.app) used by the applicati
 Basic usage example with no error handling.
 
 ```typescript
-import type { HighchartsTool, HighchartsView } from '@dpuse/dpuse-tool-highcharts';
+import { loadTool } from '@dpuse/dpuse-shared';
+import type { HighchartsView, Tool as HighchartsTool } from '@dpuse/dpuse-tool-highcharts-visualiser';
 
-async function loadHighchartsTool(version: string): Promise<HighchartsTool> {
-    if (highchartsTool) return highchartsTool;
-
-    const URL = `https://engine-eu.dpuse.app/tools/highcharts_v${version}/dpuse-tool-highcharts.es.js`;
-    const HighchartsTool = (await import(/* @vite-ignore */ URL)).HighchartsTool as new () => HighchartsTool;
-    return new HighchartsTool();
-}
-
-const highchartsTool = await loadHighchartsTool('n.n.nnn');
+// 'toolConfigs' lists the tools registered in DPUse; 'loadTool' imports the registered version from the engine's domain.
+const highchartsTool = await loadTool<HighchartsTool>(toolConfigs, 'highcharts-visualiser');
 
 const cartesianChart: HighchartsView = await highchartsTool.renderCartesianChart(/* arguments... */);
 const polarChart: HighchartsView = await highchartsTool.renderPolarChart(/* arguments... */);
@@ -114,10 +108,10 @@ The dependency tree below lists every package in this project — direct and tra
         - **[@tokenizer/inflate](https://github.com/Borewit/tokenizer-inflate)** 0.4.1 — **10 months** ago: 2025-11-18 ⚠️
             - **[debug](https://github.com/debug-js/debug)** 4.4.3 — **12 months** ago: 2025-09-13 ⚠️
                 - **[ms](https://github.com/vercel/ms)** 2.1.3 — **69 months** ago: 2020-12-08 ⚠️
-            - **[token-types](https://github.com/Borewit/token-types)** 6.1.2 — **8 months** ago: 2026-01-01 ⚠️
+            - **[token-types](https://github.com/Borewit/token-types)** 6.1.2 — **9 months** ago: 2026-01-01 ⚠️
         - **[strtok3](https://github.com/Borewit/strtok3)** 10.3.5 — **6 months** ago: 2026-03-21
             - **[@tokenizer/token](https://github.com/Borewit/tokenizer-token)** 0.3.0 — **62 months** ago: 2021-07-12 ⚠️
-        - **[token-types](https://github.com/Borewit/token-types)** 6.1.2 — **8 months** ago: 2026-01-01 ⚠️
+        - **[token-types](https://github.com/Borewit/token-types)** 6.1.2 — **9 months** ago: 2026-01-01 ⚠️
             - **[@borewit/text-codec](https://github.com/Borewit/text-codec)** 0.2.2 — **6 months** ago: 2026-03-11
             - **[@tokenizer/token](https://github.com/Borewit/tokenizer-token)** 0.3.0 — **62 months** ago: 2021-07-12 ⚠️
             - **[ieee754](https://github.com/feross/ieee754)** 1.2.1 — **71 months** ago: 2020-10-27 ⚠️

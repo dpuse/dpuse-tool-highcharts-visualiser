@@ -59,7 +59,7 @@ const state = {
 
 // ── Tools ────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
-export class HighchartsTool {
+export class Tool {
     // Actions - Render cartesian chart.
     renderCartesianChart(typeId: PresentationCartesianTypeId, contentConfig: PresentationVisualContentConfig, renderTo: HTMLElement, callback?: () => void): HighchartsView {
         const type = CARTESIAN_SERIES_TYPE_MAP[typeId];
