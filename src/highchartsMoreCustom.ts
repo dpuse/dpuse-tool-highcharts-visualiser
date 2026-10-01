@@ -4,6 +4,13 @@
 // ColumnRange, Waterfall, and Polar charts (see CARTESIAN/POLAR/RANGE_SERIES_TYPE_MAP in index.ts), so this file
 // mirrors the official master with the unused series types dropped. Imports must stay in this relative order:
 // the compose() calls below depend on side effects (series-type registration) from the imports above them.
+//
+// The compose() calls are themselves side effects: nothing uses what they return, they add polar support to the shared
+// Highcharts object. So package.json's 'sideEffects' lists this file, telling the bundler to keep all of it. With
+// 'false' the bundler drops part of the polar support and polar charts break (tested 2026-10-01: this chunk shrank
+// from 56 kB to 38 kB). It lists this one file rather than being 'true' because 'true' would also stop the bundler
+// removing unused code from every other file in the package, to protect this one; listing it keeps that clean-up
+// everywhere else and records which file needs the exception. Both settings produce the same build today.
 
 import 'highcharts/es-modules/Series/AreaRange/AreaRangeSeries.js';
 import 'highcharts/es-modules/Series/AreaSplineRange/AreaSplineRangeSeries.js';
