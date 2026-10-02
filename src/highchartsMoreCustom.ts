@@ -23,7 +23,7 @@ import SeriesRegistry from 'highcharts/es-modules/Core/Series/SeriesRegistry.js'
 import WaterfallSeries from 'highcharts/es-modules/Series/Waterfall/WaterfallSeries.js';
 
 /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, unicorn/no-top-level-side-effects --
-   vendor composition shim: highcharts/es-modules/* below the masters has no type declarations (see highchartsEsModules.d.ts), so everything here is implicitly `any`;
+   vendor composition shim: highcharts/es-modules/* below the masters has no type declarations (see declarations/highchartsEsModules.d.ts), so everything here is implicitly `any`;
    this mirrors the mutate-the-shared-global pattern used by highcharts-more.src.js itself. */
 const G = Highcharts;
 G.RadialAxis = RadialAxis;
