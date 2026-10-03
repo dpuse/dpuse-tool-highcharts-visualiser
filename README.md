@@ -7,13 +7,13 @@
 [![npm version](https://img.shields.io/npm/v/@dpuse/dpuse-tool-highcharts-visualiser?color=cb3837&label=npm)](https://www.npmjs.com/package/@dpuse/dpuse-tool-highcharts-visualiser)
 [![CI](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml/badge.svg)](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/actions/workflows/ci.yml)
 
-[DPUse](https://www.dpuse.app) · [Report a Vulnerability](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/advisories/new) · [Open an Issue](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/issues)
-
 A TypeScript wrapper for Highcharts that implements the Data Positioning chart-rendering interface. It optimizes browser memory usage by maintaining a single Highcharts instance shared across all presenters, loading optional modules only as needed.
+
+[Report a Vulnerability](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/security/advisories/new) · [Open an Issue](https://github.com/dpuse/dpuse-tool-highcharts-visualiser/issues)
 
 ## About DPUse
 
-DPUse (Data Positioning & Use) is an in-browser application that positions your data for use through three core activities: sourcing, contextualising, and publishing.
+[DPUse](https://www.dpuse.app) (Data Positioning & Use) is an in-browser application that positions your data for use through three core activities: sourcing, contextualising, and publishing.
 
 **Sourcing** uses a library of [Connectors](https://www.dpuse.app/connectors) to establish [Connections](https://www.dpuse.app) to applications, databases, file stores, and curated datasets; these connections are subsequently used to configure structured [Data Views](https://www.dpuse.app) from the underlying sources.
 
