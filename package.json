@@ -1,6 +1,6 @@
 {
     "name": "@dpuse/dpuse-tool-highcharts-visualiser",
-    "version": "1.0.105",
+    "version": "1.0.106",
     "private": false,
     "description": "A TypeScript wrapper for Highcharts that implements the Data Positioning chart-rendering interface. It optimizes browser memory usage by maintaining a single Highcharts instance shared across all presenters, loading optional modules only as needed.",
     "license": "MIT",
