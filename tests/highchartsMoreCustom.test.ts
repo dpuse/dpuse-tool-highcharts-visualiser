@@ -2,18 +2,6 @@
 import Highcharts from 'highcharts/es-modules/masters/highcharts.src.js';
 import { describe, expect, it } from 'vitest';
 
-// ── Helpers ──────────────────────────────────────────────────────────────────────────────────────────────────────────
-// `seriesTypes` and `RadialAxis` are real runtime properties Highcharts modules attach to the shared instance, but
-// they aren't part of the public API surface, so they're absent from `highcharts.src.d.ts`.
-
-function getSeriesTypes(): Record<string, unknown> {
-    return (Highcharts as unknown as { seriesTypes: Record<string, unknown> }).seriesTypes;
-}
-
-function getRadialAxis(): unknown {
-    return (Highcharts as unknown as { RadialAxis?: unknown }).RadialAxis;
-}
-
 // ── Tests ────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 describe('highchartsMoreCustom', () => {
@@ -52,3 +40,15 @@ describe('highchartsMoreCustom', () => {
         expect(getRadialAxis()).toBeDefined();
     });
 });
+
+// ── Helpers ──────────────────────────────────────────────────────────────────────────────────────────────────────────
+// `seriesTypes` and `RadialAxis` are real runtime properties Highcharts modules attach to the shared instance, but
+// they aren't part of the public API surface, so they're absent from `highcharts.src.d.ts`.
+
+function getSeriesTypes(): Record<string, unknown> {
+    return (Highcharts as unknown as { seriesTypes: Record<string, unknown> }).seriesTypes;
+}
+
+function getRadialAxis(): unknown {
+    return (Highcharts as unknown as { RadialAxis?: unknown }).RadialAxis;
+}
